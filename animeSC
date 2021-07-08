@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class animeSC : MonoBehaviour { 
+
+    Animation anim;
+    Animator animator;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = this.gameObject.GetComponent<Animation>();
+        this.animator = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Q))
+        {
+
+            anim.Play("Attentionanime");
+
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            anim.Play("gimonn");
+
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            anim.Play("hukann");
+
+        }
+        else if (Input.GetKey(KeyCode.R))
+        {
+            anim.Play("smileanime");
+
+        }
+        else if (Input.GetKey(KeyCode.T))
+        {
+            anim.Play("unaduki");
+
+        }
+        else if (Input.GetKey(KeyCode.Y))
+        {
+            anim.Play("hitei");
+
+        }
+    }
+}
